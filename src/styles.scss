@@ -9,14 +9,54 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+// Define my game colours to personalize palette.
+$my-primary-color: (
+  100: #bcc7d4,
+  200: #8fa2b7,
+  500: #1f456e,
+  700: #17365b,
+  contrast: (
+    100: #000000,
+    200: #000000,
+    500: #ffffff,
+    700: #ffffff
+  )
+);
+
+$my-accent-color: (
+  100: #d7f8c8,
+  200: #bcf3a4,
+  500: #79e749,
+  700: #66e039,
+  contrast: (
+    100: #000000,
+    200: #000000,
+    500: #000000,
+    700: #000000
+  )
+);
+
+$my-warn-color: (
+  100: #f0b3b3,
+  200: #e68080,
+  500: #cc0000,
+  700: #c00000,
+  contrast: (
+    100: #000000,
+    200: #000000,
+    500: #ffffff,
+    700: #ffffff
+  )
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$sistema-ventas-fe-primary: mat.define-palette(mat.$indigo-palette);
-$sistema-ventas-fe-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$sistema-ventas-fe-primary: mat.define-palette($my-primary-color);
+$sistema-ventas-fe-accent: mat.define-palette($my-accent-color);
 
 // The warn palette is optional (defaults to red).
-$sistema-ventas-fe-warn: mat.define-palette(mat.$red-palette);
+$sistema-ventas-fe-warn: mat.define-palette($my-warn-color);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
